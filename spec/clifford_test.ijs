@@ -1,8 +1,5 @@
 load 'src/clifford.ijs'
 
-eq =: 1&=@*/@,@([=])
-zero =: 0 * I
-
 test_square_of_element_is_identity =: 3 : 0
     assert (e1 mul e1) eq  I
 	assert (e2 mul e2) eq  I
@@ -23,8 +20,15 @@ test_scalarproduct =: 3 : 0
 
 test_wedge_product =: 3 : 0
     a =. vec 1 2 3
-	b =. vec 10 20 20
+	b =. vec 6 8 4
     assert ( a wedge b ) eq _1 * ( b wedge a)
 	assert ( a wedge a ) eq zero
 )
 
+test_multivectors =: 3 : 0
+	assert e12 eq _1 * e21
+	assert e13 eq _1 * e31
+	assert e23 eq _1 * e32
+	assert e123 eq _1 * e213
+    assert e123 eq e231
+)
