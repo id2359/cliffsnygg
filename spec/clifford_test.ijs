@@ -17,6 +17,6 @@ test_anticommutation =: 3 : 0
 test_scalarprod =: 3 : 0
    a =. 1 2 3
    b =. 10 20 30
-   assert ((a mul b) * I) eq ( a scalarprod b)
+   assert ((a mul b) * I) eq ((vec a) scalarprod (vec b))
 ) 
 
