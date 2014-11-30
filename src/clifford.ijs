@@ -19,6 +19,10 @@ scalarprod =: 4 : 0
     0.5 * ( (x mul y) + (y mul x) )
 )
 
+wedge =: 4 : 0
+    0.5 * ( (x mul y) - (y mul x))
+)
+
 
 NB. TODO 2nd Representation:  ( of a vector in 3-space via) 2x2 complex matrices obeying the Clifford algebra
  
