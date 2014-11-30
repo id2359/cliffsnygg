@@ -10,13 +10,13 @@ I  =: = i. 4
 
 vec =: 3 : 0
     NB. form the Clifford representation of the vector ae1 + be2 + ce3:
-    'a b c'=. yt
+    'a b c'=. y
     (a * e1 ) + (b * e2) + (c * e3)
 )
 
 scalarprod =: 4 : 0
-  NB. x and y are clifford vectors
-  .5 * ((x mul y) + (y mul x))
+    NB. x and y are clifford vectors
+    0.5 * ( (x mul y) + (y mul x) )
 )
 
 
